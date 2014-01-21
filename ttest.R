@@ -1,0 +1,7 @@
+hist(Workbook2$total.hours)
+x <- subset(Workbook2,Gender=="Female",select=total.hours)
+y<-subset(Workbook2, Gender=="Male",select=total.hours)
+t.test(x, y, alternative ="less", paired = FALSE, var.equal = FALSE, conf.level = 0.95) 
+hist(x$total.hours)
+hist(y$total.hours)
+getwd()
